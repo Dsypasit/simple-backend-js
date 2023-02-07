@@ -1,0 +1,23 @@
+GET localhost:8080/users
+
+GET localhost:8080/users/1
+
+DELETE localhost:8080/users/1
+
+POST localhost:8080/users
+Content-Type: application/json
+
+{
+	"name": "pasit",
+	"age": 20
+}
+
+PUT localhost:8080/users
+Content-Type: application/json
+
+{
+	"id": "1ae17f82-6655-48b4-a6c2-9fbb1ce7bf3e",
+	"name": "ppk",
+	"age": 200
+}
+
