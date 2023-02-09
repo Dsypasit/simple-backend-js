@@ -8,6 +8,9 @@ beforeAll(async () => {
   await mysqlLib.connect()
   await init()
 });
+afterAll(done => {
+  done()
+})
 
 describe("GET /health", () => {
   it("should return status ok", async () => {
