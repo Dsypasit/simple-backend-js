@@ -41,7 +41,7 @@ jobs:
         with:
           context: .
           tags: |
-            ghcr.io/dsypasit/workshop:${{ env.GITHUB_SHA }}
+            ghcr.io/dsypasit/simple-backend-js:${{ env.GITHUB_SHA }}
           push: true
 
       - name: Image digest
