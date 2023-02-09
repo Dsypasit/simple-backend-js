@@ -10,7 +10,6 @@ let users = [
 
 async function get(req, res){
 	result = await userService.get()
-	console.log(result)
 	res.status(200).json(result);
 	return
 }

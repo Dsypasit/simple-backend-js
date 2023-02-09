@@ -1,0 +1,43 @@
+[2023-02-09T02:24:40.904Z] fatal: verbose
+[2023-02-09T02:24:40.907Z] debug: debug
+[2023-02-09T02:29:27.353Z] fatal: verbose
+[2023-02-09T02:29:27.359Z] debug: debug
+[2023-02-09T02:30:43.036Z] fatal: verbose
+[2023-02-09T02:30:43.042Z] debug: debug
+[2023-02-09T02:30:55.161Z] info: someone try to access my system
+[2023-02-09T03:00:08.798Z] info: someone try to access my system
+[2023-02-09T03:03:08.414Z] info: someone try to access my system
+[2023-02-09T03:04:28.735Z] info: someone try to access my system
+[2023-02-09T03:04:28.745Z] info: ::ffff:127.0.0.1 GET / 401 11 - 7.221 ms
+
+[2023-02-09T03:05:03.699Z] error: error mysql when connection pool  Connection lost: The server closed the connection.
+[2023-02-09T03:06:27.567Z] info: someone try to access my system
+[2023-02-09T03:06:27.575Z] info: ::ffff:127.0.0.1 GET / 401 11 - 5.055 ms
+
+[2023-02-09T03:07:15.378Z] info: ::1 GET /users 200 63 - 11.061 ms
+
+[2023-02-09T03:07:24.736Z] info: someone try to access my system
+[2023-02-09T03:07:24.742Z] info: ::ffff:127.0.0.1 GET / 401 11 - 2.467 ms
+
+[2023-02-09T03:10:05.056Z] http: ::ffff:127.0.0.1 GET /health 200 2 - 3.949 ms
+
+[2023-02-09T03:10:08.537Z] info: someone try to access my system
+[2023-02-09T03:10:08.540Z] http: ::ffff:127.0.0.1 GET / 401 11 - 1.717 ms
+
+[2023-02-09T03:10:20.900Z] info: someone try to access my system
+[2023-02-09T03:10:20.902Z] http: ::ffff:127.0.0.1 GET /users 401 11 - 0.858 ms
+
+[2023-02-09T03:10:29.087Z] http: ::1 GET /users 200 32 - 7.441 ms
+
+[2023-02-09T03:10:37.366Z] http: ::1 GET /users/222 200 2 - 4.339 ms
+
+[2023-02-09T03:10:47.452Z] http: ::1 POST /users/222 404 149 - 1.956 ms
+
+[2023-02-09T03:10:56.016Z] http: ::1 POST /users 201 31 - 101.400 ms
+
+[2023-02-09T03:11:11.833Z] http: ::1 PUT /users 404 144 - 0.752 ms
+
+[2023-02-09T03:11:21.923Z] http: ::1 PUT /users/1 200 28 - 190.157 ms
+
+[2023-02-09T03:11:35.139Z] http: ::1 GET /users/1 200 40 - 1.692 ms
+
