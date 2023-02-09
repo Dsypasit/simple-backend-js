@@ -6,10 +6,11 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    env_file:
-      - .env
     environment:
       MYSQL_HOST: db
+      MYSQL_USER: dsy
+      MYSQL_PASSWORD: 1234
+      MYSQL_DATABASE: users
     depends_on:
       db:
         condition: service_healthy
