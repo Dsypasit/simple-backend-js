@@ -2,9 +2,11 @@ const request = require('supertest')
 const app = require('../app')
 
 var mysqlLib = require('../src/databases/mysql.db')
+var init = require('../src/databases/init')
 
-beforeEach(async () => {
+beforeAll(async () => {
   await mysqlLib.connect()
+  await init()
 });
 
 describe("GET /health", () => {

@@ -1,0 +1,4 @@
+FROM node:19.4.0-buster-slim as development
+WORKDIR /usr/src/app
+
+CMD [ "npm", "test" ]
