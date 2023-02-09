@@ -44,7 +44,7 @@ describe("POST /users", () =>{
 describe("PUT /users", () =>{
 	it("should return updated users", async () =>{
 		const resCreate = await request(app).post("/users")
-			.auth('admin', 1234)
+			.auth('admin', 123)
 			.send({
 				name: 'dsy1',
 				age: 19
@@ -52,7 +52,7 @@ describe("PUT /users", () =>{
 
 
 		const res = await request(app).put(`/users/${resCreate.body.id}`)
-			.auth('admin', 1234)
+			.auth('admin', 123)
 			.send({
 				name: 'dsyy',
 				age: 20
