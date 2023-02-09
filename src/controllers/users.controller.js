@@ -19,8 +19,9 @@ async  function create(req, res)  {
 		res.status(405).send('not allow');
 		return
 	}
-	result = await userService.create(req.body.name, req.body.age)
-	res.status(201).send(req.body)
+	result = await userService.create(req.body.name, req.body.age);
+	req.body.id = result.insertId;
+	res.status(201).send(req.body);
 	return
 }
 
