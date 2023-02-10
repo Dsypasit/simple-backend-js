@@ -1,5 +1,6 @@
 const uuid = require('uuid')
 const userService = require('../services/users.service')
+const { DatabaseError, ValidationError } = require('../utils/errors.util')
 const logger = require('../utils/logger.util')
 let users = [
 	{
@@ -9,9 +10,27 @@ let users = [
 	}
 ]
 
+function errorHandling(res, err){
+	if (err instanceof DatabaseError){
+			res.status(err.code).send(e.message);
+			logger.error(e.message, e.dbErr);
+		}else if (err instanceof ValidationError){
+			res.status(err.code).send(e.message);
+			logger.warn(e.message);
+		} 
+		else{
+			res.status(500);
+		}
+}
+
 async function get(req, res){
-	result = await userService.get()
-	res.status(200).json(result);
+	try{
+		result = await userService.get();
+		res.status(200).json(result);
+	}
+	catch(e){
+		errorHandling(res, e)
+	}
 	return
 }
 
@@ -25,9 +44,9 @@ async  function create(req, res)  {
 		result = await userService.create(req.body.name, req.body.age);
 		req.body.id = result.insertId;
 		res.status(201).send(req.body);
-	}catch(e){
-		res.status(500).send("database can't get data");
-		logger.error('database get error', e);
+	} 
+	catch(e){
+		errorHandling(res, e)
 	}
 	return
 }
@@ -43,14 +62,13 @@ async function getById(req, res) {
 		res.status(200).json(result);
 	}
 	catch(e){
-		res.status(500).send("database can't get data by id");
-		logger.error("database can't get data by id: ", e)
+		errorHandling(res, e)
 	}
 	return
 }
 
 async function update(req, res) {
-	if (!('userId' in req.params) || isNaN(parseInt(req.parseInt))){
+	if (!('userId' in req.params)){
 		res.status(400)
 		return
 	}
@@ -65,8 +83,7 @@ async function update(req, res) {
 		res.status(200).json({message: 'update success'});
 	}
 	catch(e){
-		res.status(500).send("database can't update data");
-		logger.error("database can't update data :", e)
+		errorHandling(res, e)
 	}
 	return
 }
@@ -82,8 +99,7 @@ async function deleteUser(req, res){
 		res.status(200).json({message: `delete success`});
 	}
 	catch(e){
-		res.status(500).send("database can't delete by id");
-		logger.error("database can't delete by id: ", e);
+		errorHandling(res, e)
 	}
 	return
 }
