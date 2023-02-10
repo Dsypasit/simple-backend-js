@@ -9,7 +9,8 @@ if (!fs.existsSync(logDir)) {
   fs.mkdirSync(logDir);
 }
 
-const filename = path.join(logDir, 'results.log');
+const allLog = path.join(logDir, 'results.log');
+const errorLog = path.join(logDir, 'error.log');
 
 const logLevels = {
   fatal: 0,
@@ -31,7 +32,11 @@ module.exports = {
   transports: [
 		new winston.transports.Console(), 
 		new winston.transports.File({
-			filename: filename
+			filename: allLog
+		}),
+		new winston.transports.File({
+			level: 'error',
+			filename: errorLog
 		})
 	],
 }
