@@ -52,23 +52,18 @@ async  function create(req, res)  {
 
 	try{
 		result = await userService.create(req.body.name, req.body.age);
-		console.log('try test')
 		req.body.id = result.insertId;
 		res.status(201).send(req.body);
 	} 
 	catch(e){
-		console.log('catch test')
 		if (e instanceof DatabaseError){
-			console.log('data test')
 			res.status(e.code).send(e.message);
 			logger.error(e.message, e.dbErr);
 		}else if (e instanceof ValidationError){
-			console.log('test')
 			res.status(e.code).send(e.message);
 			logger.warn(e.message);
 		} 
 		else{
-			console.log('other test')
 			res.status(500);
 			logger.error(e)
 		}
@@ -119,7 +114,6 @@ async function update(req, res) {
 		res.status(200).json({message: 'update success'});
 	}
 	catch(e){
-
 		if (e instanceof DatabaseError){
 			res.status(e.code).send(e.message);
 			logger.error(e.message, e.dbErr);
@@ -136,13 +130,16 @@ async function update(req, res) {
 }
 
 async function deleteUser(req, res){
-	if (!('userId' in req.params) || isNaN(parseInt(req.parseInt))){
+	console.log('test')
+	if (!('userId' in req.params)){
+		console.log('testif')
 		res.status(400);
 		return
 	}
 
 	try{
 		result = await userService.deleteUser(req.params.userId);
+		logger.info("tset")
 		res.status(200).json({message: `delete success`});
 	}
 	catch(e){

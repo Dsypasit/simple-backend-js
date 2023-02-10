@@ -133,7 +133,7 @@ async function update(req, res) {
 }
 
 async function deleteUser(req, res){
-	if (!('userId' in req.params) || isNaN(parseInt(req.parseInt))){
+	if (!('userId' in req.params)){
 		res.status(400);
 		return
 	}

@@ -36,7 +36,6 @@ function getByID(id){
 
 function create(name, age){
 	if (!isNumeric(age)){
-		console.log('service test')
 		throw new ValidationError("age must be a number")
 	}
 
@@ -56,8 +55,9 @@ function update(id, name, age){
 		throw new ValidationError("age or id must be a number")
 	}
 
+	var result
 	try{
-		let result = db.query(`UPDATE users SET name="${name}", age=${age} WHERE id=${id}`)
+		result = db.query(`UPDATE users SET name="${name}", age=${age} WHERE id=${id}`)
 	}
 	catch(e){
 		throw new DatabaseError("can't update data", e)
@@ -66,13 +66,15 @@ function update(id, name, age){
 }
 
 function deleteUser(id){
+		console.log('test2')
 	if (!isNumeric(id)){
-		throw new ValidationError("age or id must be a number")
+		throw new ValidationError("id must be a number")
 	}
 
 	var result
 	try{
 		result = db.query(`DELETE FROM users WHERE id=${id}`);
+		console.log('test')
 	}
 	catch(e){
 		throw new DatabaseError("can't delete data", e)
