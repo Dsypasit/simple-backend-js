@@ -19,6 +19,7 @@ function errorHandling(res, err){
 		logger.warn(e.message);
 	} 
 	else{
+		logger.error(e);
 		res.status(500);
 	}
 }
@@ -36,6 +37,7 @@ async function get(req, res){
 			logger.warn(e.message);
 		} 
 		else{
+			logger.error(e);
 			res.status(500);
 		}
 	}
@@ -127,6 +129,7 @@ async function update(req, res) {
 		} 
 		else{
 			res.status(500);
+			logger.error(e);
 		}
 	}
 	return
@@ -151,6 +154,7 @@ async function deleteUser(req, res){
 			logger.warn(e.message);
 		} 
 		else{
+			logger.error(e);
 			res.status(500);
 		}
 	}
