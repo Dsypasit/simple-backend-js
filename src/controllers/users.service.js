@@ -65,7 +65,7 @@ function update(id, name, age){
 }
 
 function deleteUser(id){
-	if (isNumeric(id)){
+	if (!isNumeric(id)){
 		throw ValidationError("age or id must be a number")
 	}
 
