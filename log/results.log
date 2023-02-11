@@ -223,3 +223,203 @@
 
 [2023-02-09T07:45:00.535Z] http: ::ffff:127.0.0.1 DELETE /users/4 200 28 - 47.159 ms
 
+[2023-02-09T15:48:59.777Z] http: ::ffff:127.0.0.1 GET /health 200 2 - 2.143 ms
+
+[2023-02-09T15:48:59.801Z] http: ::ffff:127.0.0.1 GET /users 200 32 - 3.938 ms
+
+[2023-02-09T15:48:59.888Z] http: ::ffff:127.0.0.1 POST /users 201 30 - 59.199 ms
+
+[2023-02-09T15:48:59.907Z] info: someone try to access my system
+[2023-02-09T15:48:59.920Z] http: ::ffff:127.0.0.1 POST /users 401 11 - 11.412 ms
+
+[2023-02-09T15:48:59.931Z] info: someone try to access my system
+[2023-02-09T15:48:59.937Z] http: ::ffff:127.0.0.1 PUT /users/undefined 401 11 - 4.757 ms
+
+[2023-02-09T15:49:00.000Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 45.324 ms
+
+[2023-02-09T15:49:00.074Z] http: ::ffff:127.0.0.1 DELETE /users/3 200 28 - 60.347 ms
+
+[2023-02-09T15:51:11.579Z] http: ::ffff:127.0.0.1 GET /health 200 2 - 2.508 ms
+
+[2023-02-09T15:51:11.610Z] http: ::ffff:127.0.0.1 GET /users 200 32 - 4.681 ms
+
+[2023-02-09T15:51:11.842Z] http: ::ffff:127.0.0.1 POST /users 201 30 - 200.939 ms
+
+[2023-02-09T15:51:11.889Z] info: someone try to access my system
+[2023-02-09T15:51:11.906Z] http: ::ffff:127.0.0.1 POST /users 401 11 - 14.472 ms
+
+[2023-02-09T15:51:11.931Z] info: someone try to access my system
+[2023-02-09T15:51:11.942Z] http: ::ffff:127.0.0.1 PUT /users/undefined 401 11 - 9.325 ms
+
+[2023-02-09T15:51:12.146Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 170.070 ms
+
+[2023-02-09T15:51:12.236Z] http: ::ffff:127.0.0.1 DELETE /users/3 200 28 - 70.846 ms
+
+[2023-02-09T16:01:13.496Z] http: ::ffff:127.0.0.1 GET /health 200 2 - 1.740 ms
+
+[2023-02-09T16:01:13.522Z] http: ::ffff:127.0.0.1 GET /users 200 32 - 4.085 ms
+
+[2023-02-09T16:01:13.597Z] http: ::ffff:127.0.0.1 POST /users 201 30 - 45.873 ms
+
+[2023-02-09T16:01:13.672Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 59.005 ms
+
+[2023-02-09T16:01:13.758Z] http: ::ffff:127.0.0.1 PUT /users/3 200 28 - 42.593 ms
+
+[2023-02-09T16:01:13.849Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 58.732 ms
+
+[2023-02-09T16:01:13.954Z] http: ::ffff:127.0.0.1 DELETE /users/4 200 28 - 74.272 ms
+
+[2023-02-10T09:47:59.879Z] info: someone try to access my system
+[2023-02-10T09:47:59.890Z] http: ::1 GET /users 401 11 - 7.853 ms
+
+[2023-02-10T09:48:13.970Z] http: ::1 GET /users 200 32 - 6.248 ms
+
+[2023-02-10T09:48:53.188Z] http: ::1 GET /users 200 32 - 4.057 ms
+
+[2023-02-10T12:19:06.276Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:19:20.665Z] http: ::1 GET /users - - - - ms
+
+[2023-02-10T12:19:30.311Z] http: ::1 GET /health 200 2 - 2.840 ms
+
+[2023-02-10T12:20:23.027Z] http: ::1 GET /users - - - - ms
+
+[2023-02-10T12:22:04.027Z] http: ::1 GET /users 200 94 - 9.889 ms
+
+[2023-02-10T12:23:03.813Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:23:10.412Z] http: ::1 GET /users 200 94 - 3.799 ms
+
+[2023-02-10T12:23:33.315Z] http: ::1 GET /users 200 125 - 11.032 ms
+
+[2023-02-10T12:23:38.400Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:29:43.963Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:29:52.421Z] http: ::1 POST /users 201 29 - 74.342 ms
+
+[2023-02-10T12:32:08.740Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:32:13.258Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:37:41.386Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:39:42.852Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:40:24.181Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:43:29.237Z] http: ::1 POST /users - - - - ms
+
+[2023-02-10T12:48:51.092Z] error: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+[2023-02-10T12:50:17.347Z] warn: age must be a number
+[2023-02-10T12:50:17.353Z] http: ::1 POST /users 400 20 - 4.157 ms
+
+[2023-02-10T12:51:01.221Z] error: Class constructor ValidationError cannot be invoked without 'new'
+[2023-02-10T12:51:36.530Z] warn: age must be a number
+[2023-02-10T12:51:36.536Z] http: ::1 POST /users 400 20 - 5.123 ms
+
+[2023-02-10T12:51:42.063Z] http: ::1 GET /users 200 695 - 7.038 ms
+
+[2023-02-10T12:52:42.909Z] http: ::1 GET /users/asd - - - - ms
+
+[2023-02-10T12:53:27.108Z] warn: id must be a number
+[2023-02-10T12:53:27.112Z] http: ::1 GET /users/asd 400 19 - 5.423 ms
+
+[2023-02-10T13:00:54.632Z] http: ::1 GET /users 200 791 - 11.089 ms
+
+[2023-02-10T13:01:00.351Z] http: ::1 GET /users/1 200 32 - 4.419 ms
+
+[2023-02-10T13:01:06.915Z] warn: age or id must be a number
+[2023-02-10T13:01:06.916Z] http: ::1 PUT /users/1 400 26 - 1.691 ms
+
+[2023-02-10T13:01:11.489Z] http: ::1 PUT /users/1 200 28 - 1.094 ms
+
+[2023-02-10T13:04:12.648Z] http: ::ffff:127.0.0.1 GET /health 200 2 - 3.435 ms
+
+[2023-02-10T13:04:12.695Z] http: ::ffff:127.0.0.1 GET /users 200 32 - 8.318 ms
+
+[2023-02-10T13:04:12.854Z] http: ::ffff:127.0.0.1 POST /users 201 30 - 101.429 ms
+
+[2023-02-10T13:04:12.965Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 81.106 ms
+
+[2023-02-10T13:04:13.007Z] http: ::ffff:127.0.0.1 PUT /users/3 200 28 - 3.921 ms
+
+[2023-02-10T13:04:13.164Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 130.719 ms
+
+[2023-02-10T13:10:07.224Z] http: ::ffff:127.0.0.1 GET /health 200 2 - 2.780 ms
+
+[2023-02-10T13:10:07.273Z] http: ::ffff:127.0.0.1 GET /users 200 32 - 7.817 ms
+
+[2023-02-10T13:10:07.431Z] http: ::ffff:127.0.0.1 POST /users 201 30 - 102.567 ms
+
+[2023-02-10T13:10:07.527Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 66.171 ms
+
+[2023-02-10T13:10:07.591Z] http: ::ffff:127.0.0.1 PUT /users/3 200 28 - 44.132 ms
+
+[2023-02-10T13:10:07.660Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 44.404 ms
+
+[2023-02-10T13:14:43.371Z] http: ::ffff:127.0.0.1 GET /health 200 2 - 2.958 ms
+
+[2023-02-10T13:14:43.429Z] http: ::ffff:127.0.0.1 GET /users 200 32 - 11.837 ms
+
+[2023-02-10T13:14:43.654Z] http: ::ffff:127.0.0.1 POST /users 201 30 - 152.092 ms
+
+[2023-02-10T13:14:43.741Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 53.323 ms
+
+[2023-02-10T13:14:43.807Z] http: ::ffff:127.0.0.1 PUT /users/3 200 28 - 45.023 ms
+
+[2023-02-10T13:14:43.924Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 86.298 ms
+
+[2023-02-10T13:31:55.284Z] http: ::1 PUT /users/1 200 28 - 71.524 ms
+
+[2023-02-10T13:31:58.771Z] http: ::1 GET /users/1 200 31 - 5.367 ms
+
+[2023-02-10T13:32:07.601Z] http: ::1 POST /users 201 36 - 88.763 ms
+
+[2023-02-10T13:33:56.283Z] http: ::1 DELETE /users/1 - - - - ms
+
+[2023-02-10T13:34:49.234Z] http: ::1 DELETE /users/1 - - - - ms
+
+[2023-02-10T13:34:54.915Z] http: ::1 DELETE /users/1 - - - - ms
+
+[2023-02-10T13:35:35.923Z] http: ::1 DELETE /users/1 - - - - ms
+
+[2023-02-10T13:37:04.420Z] info: someone try to access my system
+[2023-02-10T13:37:04.431Z] http: ::1 DELETE /users/1 401 11 - 8.518 ms
+
+[2023-02-10T13:37:52.485Z] http: ::1 DELETE /users/1 - - - - ms
+
+[2023-02-10T13:37:59.647Z] http: ::1 DELETE /users/1 500 1357 - 5.063 ms
+
+[2023-02-10T13:38:46.988Z] http: ::1 DELETE /users/1 200 5 - 4.836 ms
+
+[2023-02-10T13:40:45.331Z] http: ::1 DELETE /users/1 200 28 - 81.479 ms
+
+[2023-02-10T13:43:13.663Z] http: ::ffff:127.0.0.1 GET /health 200 2 - 3.152 ms
+
+[2023-02-10T13:43:13.713Z] http: ::ffff:127.0.0.1 GET /users 200 32 - 7.016 ms
+
+[2023-02-10T13:43:13.838Z] http: ::ffff:127.0.0.1 POST /users 201 30 - 70.793 ms
+
+[2023-02-10T13:43:13.918Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 49.766 ms
+
+[2023-02-10T13:43:13.985Z] http: ::ffff:127.0.0.1 PUT /users/3 200 28 - 47.363 ms
+
+[2023-02-10T13:43:14.065Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 56.061 ms
+
+[2023-02-10T13:43:14.169Z] http: ::ffff:127.0.0.1 DELETE /users/4 200 28 - 84.159 ms
+
+[2023-02-11T12:51:54.633Z] http: ::ffff:127.0.0.1 GET /health 200 2 - 2.609 ms
+
+[2023-02-11T12:51:54.673Z] http: ::ffff:127.0.0.1 GET /users 200 32 - 6.288 ms
+
+[2023-02-11T12:51:54.938Z] http: ::ffff:127.0.0.1 POST /users 201 30 - 139.937 ms
+
+[2023-02-11T12:51:55.026Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 55.088 ms
+
+[2023-02-11T12:51:55.129Z] http: ::ffff:127.0.0.1 PUT /users/3 200 28 - 54.356 ms
+
+[2023-02-11T12:51:55.244Z] http: ::ffff:127.0.0.1 POST /users 201 31 - 69.362 ms
+
+[2023-02-11T12:51:55.347Z] http: ::ffff:127.0.0.1 DELETE /users/4 200 28 - 69.690 ms
+

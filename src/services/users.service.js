@@ -66,7 +66,6 @@ function update(id, name, age){
 }
 
 function deleteUser(id){
-		console.log('test2')
 	if (!isNumeric(id)){
 		throw new ValidationError("id must be a number")
 	}
@@ -74,7 +73,6 @@ function deleteUser(id){
 	var result
 	try{
 		result = db.query(`DELETE FROM users WHERE id=${id}`);
-		console.log('test')
 	}
 	catch(e){
 		throw new DatabaseError("can't delete data", e)

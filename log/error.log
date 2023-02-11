@@ -1,0 +1,2 @@
+[2023-02-10T12:48:51.092Z] error: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+[2023-02-10T12:51:01.221Z] error: Class constructor ValidationError cannot be invoked without 'new'

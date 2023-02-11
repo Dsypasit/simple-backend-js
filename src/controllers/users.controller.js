@@ -50,23 +50,18 @@ async  function create(req, res)  {
 
 	try{
 		result = await userService.create(req.body.name, req.body.age);
-		console.log('try test')
 		req.body.id = result.insertId;
 		res.status(201).send(req.body);
 	} 
 	catch(e){
-		console.log('catch test')
 		if (e instanceof DatabaseError){
-			console.log('data test')
 			res.status(e.code).send(e.message);
 			logger.error(e.message, e.dbErr);
 		}else if (e instanceof ValidationError){
-			console.log('test')
 			res.status(e.code).send(e.message);
 			logger.warn(e.message);
 		} 
 		else{
-			console.log('other test')
 			res.status(500);
 			logger.error(e)
 		}
